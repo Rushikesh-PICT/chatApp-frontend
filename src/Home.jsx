@@ -4,31 +4,30 @@ export default function Home() {
     const navigate = useNavigate();
 
     return (
-        <div
-            style={{
-                height: "100vh",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: "20px",
-            }}
-        >
-            <h1>Welcome to Chat App</h1>
+        <div style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+        }}>
+            <div className="card" style={{ textAlign: "center" }}>
+                <h1>Chat App</h1>
+                <p>Secure real-time messaging</p>
 
-            <button
-                style={{ width: 120, padding: 10 }}
-                onClick={() => navigate("/login")}
-            >
-                Login
-            </button>
+                <button style={{ width: "100%", marginTop: 16 }}
+                        onClick={() => navigate("/login")}>
+                    Login
+                </button>
 
-            <button
-                style={{ width: 120, padding: 10 }}
-                onClick={() => navigate("/signup")}
-            >
-                Signup
-            </button>
+                <button style={{
+                    width: "100%",
+                    marginTop: 12,
+                    background: "#22c55e"
+                }}
+                        onClick={() => navigate("/signup")}>
+                    Signup
+                </button>
+            </div>
         </div>
     );
 }

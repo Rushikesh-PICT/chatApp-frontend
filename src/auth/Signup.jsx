@@ -21,38 +21,62 @@ export default function Signup() {
     };
 
     return (
-        <div style={{ padding: 40 }}>
-            <h2>Signup</h2>
+        <div style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+        }}>
+            <div className="card">
+                <h2>Signup</h2>
 
-            <input
-                placeholder="Username"
-                onChange={(e) =>
-                    setForm({ ...form, username: e.target.value })
-                }
-            />
+                <input
+                    placeholder="Username"
+                    onChange={(e) =>
+                        setForm({ ...form, username: e.target.value })
+                    }
+                />
 
-            <br /><br />
+                <br /><br />
 
-            <input
-                placeholder="Email"
-                onChange={(e) =>
-                    setForm({ ...form, email: e.target.value })
-                }
-            />
+                <input
+                    placeholder="Email"
+                    onChange={(e) =>
+                        setForm({ ...form, email: e.target.value })
+                    }
+                />
 
-            <br /><br />
+                <br /><br />
 
-            <input
-                type="password"
-                placeholder="Password"
-                onChange={(e) =>
-                    setForm({ ...form, password: e.target.value })
-                }
-            />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) =>
+                        setForm({ ...form, password: e.target.value })
+                    }
+                />
 
-            <br /><br />
+                <br /><br />
 
-            <button onClick={submit}>Signup</button>
+                <button
+                    style={{ width: "100%" }}
+                    onClick={submit}          // ✅ FIX
+                >
+                    Signup
+                </button>
+
+                <button
+                    style={{
+                        width: "100%",
+                        marginTop: 10,
+                        background: "#e5e7eb",
+                        color: "#000"
+                    }}
+                    onClick={() => navigate("/")}
+                >
+                    Back
+                </button>
+            </div>
         </div>
     );
 }

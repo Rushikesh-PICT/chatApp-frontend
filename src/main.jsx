@@ -1,4 +1,5 @@
 import process from "process";
+import "./styles/App.css";
 import { Buffer } from "buffer";
 window.process = process;
 window.Buffer = Buffer;

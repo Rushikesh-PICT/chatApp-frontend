@@ -16,31 +16,53 @@ export default function Login() {
     };
 
     return (
-        <div style={{ padding: 40 }}>
-            <h2>Login</h2>
+        <div style={{
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+        }}>
+            <div className="card">
+                <h2>Login</h2>
 
-            <input
-                placeholder="Username"
-                value={form.username}
-                onChange={(e) =>
-                    setForm({ ...form, username: e.target.value })
-                }
-            />
+                <input
+                    placeholder="Username"
+                    onChange={(e) =>
+                        setForm({ ...form, username: e.target.value })
+                    }
+                />
 
-            <br /><br />
+                <br /><br />
 
-            <input
-                type="password"
-                placeholder="Password"
-                value={form.password}
-                onChange={(e) =>
-                    setForm({ ...form, password: e.target.value })
-                }
-            />
+                <input
+                    type="password"
+                    placeholder="Password"
+                    onChange={(e) =>
+                        setForm({ ...form, password: e.target.value })
+                    }
+                />
 
-            <br /><br />
+                <br /><br />
 
-            <button onClick={submit}>Login</button>
+                <button
+                    style={{ width: "100%" }}
+                    onClick={submit}
+                >
+                    Login
+                </button>
+
+                <button
+                    style={{
+                        width: "100%",
+                        marginTop: 10,
+                        background: "#e5e7eb",
+                        color: "#000"
+                    }}
+                    onClick={() => navigate("/")}
+                >
+                    Back
+                </button>
+            </div>
         </div>
     );
 }
