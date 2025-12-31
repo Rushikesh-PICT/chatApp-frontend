@@ -9,7 +9,7 @@ export const connectWS = (onMessage) => {
     const token = localStorage.getItem("token");
 
     stompClient = new Client({
-        brokerURL: "ws://localhost:8080/ws",
+        brokerURL: "ws://http://3.107.15.127:8080/ws",
         connectHeaders: {
             token: token
         },
